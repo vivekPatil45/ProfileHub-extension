@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coder's Profiles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Menlo&family=Cuprum&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style type="text/css">
+        :root {
+            --background-color: #0d1117;
+            --text-color: #c9d1d9;
+            --input-background-color: #161b22;
+            --input-border-color: #30363d;
+            --input-focus-border-color: #58a6ff;
+            --button-background-color: #238636;
+            --button-hover-background-color: #2ea043;
+            --button-text-color: #ffffff;
+            --link-color: #58a6ff;
+            --link-hover-color: #1f6feb;
+        }
+        html, body {
+            font-family: "Cuprum", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            width: 320px;
+            height: 480px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        h2 {
+            font-family: "Menlo", monospace;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-color);
+            margin: 16px 0 8px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        p {
+            font-size: 14px;
+            color: #b0b0b0;
+            margin: 0 0 16px;
+            text-align: center;
+        }
+        a:link, a:visited {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+        a:hover {
+            color: var(--link-hover-color);
+        }
+        .modal-icons {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 0 10px;
+        }
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            /* align-items: center; */
+
+        }
+        .flex {
+            opacity: 1;
+            transition: opacity 0.2s ease-in-out;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+        .flex:hover {
+            opacity: 0.6;
+        }
+        .flex .fa, .flex img {
+            font-size: 30px;
+            color: var(--text-color);
+        }
+        .flex img {
+            width: 40px;
+            height: 30px;
+        }
+        .flex div {
+            visibility: hidden;
+            margin-top: 4px;
+            font-size: 12px;
+            color: #b0b0b0;
+            text-align: center;
+        }
+        .flex:hover div {
+            visibility: visible;
+        }
+        .btn {
+            color: var(--button-text-color) !important;
+            border-radius: .25rem;
+            padding: .375rem .75rem;
+            line-height: 1.25rem;
+            font-size: .875rem;
+            text-align: center;
+            vertical-align: middle;
+            background-color: var(--button-background-color);
+            border: 1px solid var(--button-background-color);
+            margin-top: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .btn:hover {
+            background-color: var(--button-hover-background-color);
+            border-color: var(--button-hover-background-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="modal-header">
+        <h2>Coder's Profiles</h2>
+        <p>One Place to find all Profiles for a Programmer</p>
+    </div>
+    <div class="modal-icons">
+        <div class="flex-container">
+            <div class="flex">
+                <a id="portfolio_link" href="#!" target="_blank" title="My Portfolio">
+                    <i class="fa fa-globe"></i>
+                    <div>Portfolio</div>
+                </a>
+            </div>
+            <div class="flex">
+                <a id="linkedin_link" href="#!" target="_blank" title="Linkedin">
+                    <i class="fa fa-linkedin"></i>
+                    <div>Linkedin</div>
+                </a>
+            </div>
+            <div class="flex">
+                <a id="github_link" href="#!" target="_blank" title="GitHub">
+                    <i class="fa fa-github"></i>
+                    <div>GitHub</div>
+                </a>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="flex">
+                <a id="stackoverflow_link" href="#!" target="_blank" title="Stack Overflow">
+                    <i class="fa fa-stack-overflow"></i>
+                    <div>Stack Overflow</div>
+                </a>
+            </div>
+            <div class="flex">
+                <a id="twitter_link" href="#!" target="_blank" title="Twitter">
+                    <i class="fa fa-twitter"></i>
+                    <div>Twitter</div>
+                </a>
+            </div>
+            <div class="flex">
+                <a id="facebook_link" href="#!" target="_blank" title="Facebook">
+                    <i class="fa fa-facebook"></i>
+                    <div>Facebook</div>
+                </a>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="flex">
+                <a id="medium_link" href="#!" target="_blank" title="Medium">
+                    <i class="fa fa-medium"></i>
+                    <div>Medium</div>
+                </a>
+            </div>
+            <div class="flex">
+                <a id="hashnode_link" href="#!" target="_blank" title="Hashnode">
+                    <!-- <i class="fa-solid fa-code"></i> -->
+                    <!-- <i class="fa fa-hashnode"></i> -->
+                    <i class="fa fa-hashtag"></i>
+
+                    
+                    <div>Hashnode</div>
+                </a>
+            </div>
+            <div class="flex">
+                <a id="quora_link" href="#!" target="_blank" title="Quora">
+                    <i class="fa fa-quora"></i>
+                    <div>Quora</div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="flex-container">
+            <div class="flex">
+                <a id="leetcode_link" href="#!" target="_blank" title="LeetCode">
+                    <img src="leetcode.svg" alt="LeetCode">
+                    <div>LeetCode</div>
+                </a>
+            </div>
+            <div class="flex">
+                <a id="codechef_link" href="#!" target="_blank" title="Codechef">
+                    <img  src="codechef.svg" alt="Codechef">
+                    <!-- <img width="50" height="50" src="https://img.icons8.com/ios/50/codechef.png" alt="codechef"/> -->
+                    <div>Codechef</div>
+                </a>
+            </div>
+            <div class="flex">
+                <a id="codeforces_link" href="#!" target="_blank" title="Codeforces">
+                    <img src="code-forces.svg" alt="Codeforces">
+                    <div>Codeforces</div>
+                </a>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="flex">
+                <a id="website_link1" href="#!" target="_blank" title="website_link1">
+                    <i class="fa fa-laptop-code"></i>
+                    <div>Website1</div>
+                </a>
+            </div>
+            <div class="flex">
+                <a id="website_link2" href="#!" target="_blank" title="website_link2">
+                    <i class="fa fa-laptop-code"></i>
+
+                    <div>Website2</div>
+                </a>
+            </div>
+            <div class="flex">
+                <a id="website_link3" href="#!" target="_blank" title="website_link3">
+                    <i class="fa fa-laptop-code"></i>
+
+                    <div>Website3</div>
+                </a>
+            </div>
+        </div>
+        <a class="btn" role="button" href="edit.html">Edit</a>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Launcher: Edit Links</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Menlo&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        :root {
+            --background-color: #0d1117;
+            --text-color: #c9d1d9;
+            --input-background-color: #161b22;
+            --input-border-color: #30363d;
+            --input-focus-border-color: #58a6ff;
+            --button-background-color: #238636;
+            --button-hover-background-color: #2ea043;
+            --button-text-color: #ffffff;
+        }
+
+        body {
+            width: 350px;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-family: "Menlo", monospace;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 0 20px;
+            color: var(--text-color);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            border: 1px solid var(--input-border-color);
+            background-color: var(--input-background-color);
+            color: var(--text-color);
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .form-control::placeholder {
+            color: #8b949e;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--input-focus-border-color);
+            background-color: var(--input-background-color);
+        }
+
+        .btn {
+            display: inline-block;
+            color: var(--button-text-color);
+            border-radius: .25rem;
+            padding: .375rem .75rem;
+            line-height: 1.25rem;
+            font-size: .875rem;
+            text-align: center;
+            background-color: var(--button-background-color);
+            border: 1px solid var(--button-background-color);
+            margin: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--button-hover-background-color);
+            border-color: var(--button-hover-background-color);
+        }
+
+        #cont {
+            max-height: 320px;
+            overflow-y: auto;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #555;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <h1>Edit Coder's Profiles</h1>
+    <div id="cont">
+        <input class="form-control" id="portfolio" type="text" placeholder="Portfolio">
+        <input class="form-control" id="linkedin" type="text" placeholder="LinkedIn">
+        <input class="form-control" id="github" type="text" placeholder="GitHub">
+        <input class="form-control" id="stackoverflow" type="text" placeholder="Stack Overflow">
+        <input class="form-control" id="twitter" type="text" placeholder="Twitter">
+        <input class="form-control" id="facebook" type="text" placeholder="Facebook">
+        <input class="form-control" id="medium" type="text" placeholder="Medium">
+        <input class="form-control" id="hashnode" type="text" placeholder="Hashnode">
+        <input class="form-control" id="quora" type="text" placeholder="Quora">
+        <input class="form-control" id="leetcode" type="text" placeholder="LeetCode">
+        <input class="form-control" id="codechef" type="text" placeholder="Codechef">
+        <input class="form-control" id="codeforces" type="text" placeholder="Codeforces">
+        <input class="form-control" id="website1" type="text" placeholder="Website1">
+        <input class="form-control" id="website2" type="text" placeholder="Website2">
+        <input class="form-control" id="website3" type="text" placeholder="Website3">
+    </div>
+    <center>
+        <button class="btn" id="save">Save</button>
+        <a class="btn" role="button" href="popup.html" style="text-decoration: none;">Back</a>
+    </center>
+    <script src="edit.js"></script>
+</body>
+</html>
